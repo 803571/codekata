@@ -7,14 +7,20 @@
 // 인덱스 i, j에 대해 i ≠ j이면 arr[i] ≠ arr[j] 입니다.
 
 function solution(arr) {
-    let answer = [];
-    for (let i = 0; i < arr.length; i++) { //0~3 
-        
-    } 
-    
-    return answer;
+    arr.splice(arr.indexOf(Math.min(...arr)), 1);
+    // 배열arr에서 내용을 변경하려고 한다
+    // 배열arr에서 특정인덱스를 찾으려고한다(가장 작은 수(배열arr을 전개연산))
+    // 4 3 2 1로 풀어서 그중 가장 작은 수 1을 찾는내용. 그리고 두번째 매개변수는 제거할 개수
+    arr.length <= 1 ? answer = [-1] : answer = arr
+    // 배열의 길이가 1보다 작거나 같은가? 참이면 answer에 [-1]을 반환하고
+    // 거짓이라면 위 조건을 행하고 빠진 배열을 반환
+
+    return answer
 }
 
 console.log(solution([4, 3, 2, 1]));
 
-// 풀다가 말았음!
+// 정수담긴 배열 [4,3,2,1]인데
+// 여기서 가장 작은 수 제거한 배열을 리턴이면 4,3,2만 리턴이지
+// 리턴할때 빈배열이면 [-1]을 리턴인데 이건 뭐 else 박으면 되고 <-아니었고..
+// 배열에서 제거하는 메소드가 arr.splice[내용]
