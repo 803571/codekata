@@ -9,8 +9,10 @@ function solution(x) {
     let sum = 0;
     let str = x.toString().split(''); // '10' , ['1', '0']
     for (let i = 0; i < str.length; i++) {
-        sum += Number(str[i]);
+        sum += Number(str[i]); //str[0] = "1", str[1] = "8" = 1, 8 9 sum 
     }
     return x % sum == 0? true : false;
 }
 console.log(solution(x));
+
+// x= 18, "18" ["1", "8"] = 길이가 2다! 0 1

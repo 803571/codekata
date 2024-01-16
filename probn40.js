@@ -37,7 +37,7 @@ function solution(n) {
     
 }
 
-console.log(solution(45));
+console.log(solution(45)); 
 
 // 1. 변수 aA는 주어진 n을 3진수로 바꿈. toString(3)은 해당 수를 3진수로 표현하는 문자열이 된다.
 // 1-2. 45.toString(3);은 1200이 된다.
